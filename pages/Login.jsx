@@ -3,6 +3,22 @@ import Link from "next/link";
 import Styles from "../styles/Sign.module.css"; 
 
 export default function Signup() {
+    function login() { 
+        const username = document.getElementById("loginUsername").value; 
+        const password = document.getElementById("loginPassword").value; 
+        
+        let users = JSON.parse(localStorage.getItem("users")) || []; 
+        
+        const validUser = users.find( 
+            user => user.username === username && user.password === password 
+        ); 
+        
+        if (validUser) { 
+            document.getElementById("log").click();
+        } else {
+            alert("Invalid login details.");
+        } 
+    }
     return(
         <>
             <Head>
@@ -30,16 +46,14 @@ export default function Signup() {
                         
                         <nav>
                             <label>Username</label>
-                            <input type="text" required />
+                            <input type="text" id="loginUsername" required />
                         </nav>
                         <nav>
                             <label>Password</label>
-                            <input type="password" required />
+                            <input type="password" id="loginPassword" required />
                         </nav>
                         <nav>
-                            <button onClick={() => {
-                                document.querySelector("#log").click();
-                            }}>Login</button>
+                            <button onClick={login}>Login</button>
                         </nav>
                         <Link href="/Dashboard" id="log"></Link>
                     </aside>

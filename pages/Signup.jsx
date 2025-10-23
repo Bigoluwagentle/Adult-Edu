@@ -3,6 +3,22 @@ import Link from "next/link";
 import Styles from "../styles/Sign.module.css"; 
 
 export default function Signup() {
+    function Create() { 
+        const username = document.getElementById("signupUsername").value; 
+        const password = document.getElementById("signupPassword").value; 
+        
+        if (!username || !password) { 
+            alert("fill all the fields");
+        } 
+        let users = JSON.parse(localStorage.getItem("users")) || []; 
+        if (username && password) { 
+            document.querySelector("#log").click();
+            users.push({ username, password }); 
+            localStorage.setItem("users", JSON.stringify(users));
+        }else if(users.find(user => user.username === username && user.password === password)){
+            alert("Email already exists.");
+        }
+    }
     return(
         <>
             <Head>
@@ -36,19 +52,17 @@ export default function Signup() {
                         </nav>
                         <nav>
                             <label>Username</label>
-                            <input type="text" required />
+                            <input type="text" id="signupUsername" required />
                         </nav>
                         <nav>
                             <label>Password</label>
-                            <input type="password" required />
+                            <input type="password" id="signupPassword" required />
                         </nav>
                         <nav>
                             <p><input type="checkbox"/> I agree to follow the privacy information</p>
                         </nav>
                         <nav>
-                            <button onClick={() => {
-                                document.querySelector("#log").click();
-                            }}>Sign Up</button>
+                            <button onClick={Create}>Sign Up</button>
                         </nav>
                         <Link href="/Login" id="log"></Link>
                     </aside>
