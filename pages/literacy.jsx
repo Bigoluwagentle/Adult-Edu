@@ -28,9 +28,9 @@ const Literacy = () => {
                     <i class="fa-solid fa-xmark" onClick={close}></i>
                     <nav>
                         <Link href="/Dashboard">Home</Link>
-                        <Link href="/literacy">Literacy</Link>
-                        <Link href="#">Adulthood Concept</Link>
-                        <Link href="#">Life Long Leanring </Link>
+                        <Link href="/LiteracyPage">Literacy</Link>
+                        <Link href="/Adulthood">Adulthood Concept</Link>
+                        <Link href="/Livelong">Life Long Leanring </Link>
                     </nav>
                 </motion.div>
                 <motion.header
