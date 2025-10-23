@@ -1,0 +1,84 @@
+#sign{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFF;
+    display: flex;
+
+    > section{
+        flex: 1;
+        background-color: #13A310;
+        > nav{
+            margin: 20px;
+            > img{
+                width: 60px;
+            }
+            > h2{
+                font-size: 2rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #FFF;
+                margin-bottom: 20px;
+            }
+        }
+        > img{
+            width: 80%;
+        }
+    }
+    > article{
+        flex: 1;
+        > p{
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            > b{
+                cursor: pointer;
+            }
+        }
+        > aside{
+            margin-left: 60px;
+            margin-top: 60px;
+            > legend{
+                color: #000000;
+                font-weight: bold;
+                letter-spacing: 2px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            > p{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-top: 20px;
+                width: 90%;
+            }
+            > nav{
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                > label{
+                    color: #000000;
+                    margin-bottom: 5px;
+                }
+                > input{
+                    min-height: 50px;
+                    width: 90%;
+                    background-color: #F2EFF8;
+                    border: none;
+                    outline: none;
+                    border-radius: 4px;
+                    padding: 10px;
+                }
+                > p{
+                    display: flex;
+                    align-items: center;
+                }
+                > button{
+                    width: 90%;
+                    min-height: 50px;
+                    background-color: #13A310;
+                    border: none;
+                    color: #FFF;
+                    border-radius: 30px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
