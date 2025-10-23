@@ -28,26 +28,26 @@ export default function Home() {
         >
           <i class="fa-solid fa-xmark" onClick={close}></i>
           <nav>
-            <Link href="#">Home</Link>
-            <Link href="#">Literacy</Link>
-            <Link href="#">Adulthood Concept</Link>
-            <Link href="#">Life Long Leanring </Link>
+            <Link href="/Dashboard">Home</Link>
+            <Link href="/LiteracyPage">Literacy</Link>
+            <Link href="/Adulthood">Adulthood Concept</Link>
+            <Link href="/Livelong">Life Long Leanring </Link>
           </nav>
         </motion.div>
         <motion.header
-          initial={{y:-100}}
+          initial={{y:-70}}
           whileInView={{y:0}}
           transition={{duration:1.2}}
         >
           <img src="/Logo.svg" />
           <nav>
-            <Link href="#">Home</Link>
-            <Link href="/literacy">Literacy</Link>
-            <Link href="#">Adulthood Concept</Link>
-            <Link href="#">Life Long Leanring </Link>
+            <Link href="/Dashboard">Home</Link>
+            <Link href="/LiteracyPage">Literacy</Link>
+            <Link href="/Adulthood">Adulthood Concept</Link>
+            <Link href="/Livelong">Life Long Leanring </Link>
           </nav>
-          <img src="/profile.png" />
           <i className="fa-solid fa-bars" id={styles.menu} onClick={menu}></i>
+          <img src="/profile.png" />
         </motion.header>
 
         <section>
@@ -59,7 +59,9 @@ export default function Home() {
             <h1>Unlock Your Potential with Lifelong Learning</h1>
             <p>At Adult Edu, we empower adult learners with practical, job-ready skills through flexible and effective learning programs.</p>
             <p>Whether you're looking to enhance your expertise, switch careers, or develop new opportunities, our courses are designed to help you achieve your goals—quickly and efficiently.</p>
-            <button>Enroll Now</button>
+            <button onClick={() => {
+              document.querySelector("#lite").click();
+            }}>Enroll Now</button>
           </motion.div>
           <motion.img src="/hero-sec.svg" 
             initial={{x:100}}
@@ -77,7 +79,9 @@ export default function Home() {
             >
               <h2>About Adult-Edu</h2>
               <p>The Adult Education and Family Literacy Act (Adult-Edu) is dedicated to empowering individuals through lifelong learning. Our programs support adult learners, including those with little to no prior education, by equipping them with essential literacy, communication, and problem-solving skills. AEFLA aims to foster self-sufficiency and professional growth, ensuring every learner has the tools to succeed in today’s evolving world.</p>
-              <button>Continue Reading</button>
+              <button onClick={() => {
+                document.querySelector("#lite").click();
+              }}>Continue Reading</button>
             </motion.div>
             <motion.img src="/pic2.svg" 
               initial={{x:100}}
@@ -101,6 +105,9 @@ export default function Home() {
               initial={{x:100, opacity:0}}
               whileInView={{x:0, opacity:1}}
               transition={{duration:1, delay:0.3}}
+              onClick={() => {
+                document.querySelector("#lite").click();
+              }}
             >Continue Reading</motion.button>
           </article>
         </main>
@@ -224,6 +231,7 @@ export default function Home() {
             <img src="YouTube.svg" />
           </summary>
         </footer>
+        <Link href="/literacy" id="lite"></Link>
       </div>
     </>
   );

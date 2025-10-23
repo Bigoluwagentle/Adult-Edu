@@ -46,10 +46,14 @@ export default function Signup() {
                             <p><input type="checkbox"/> I agree to follow the privacy information</p>
                         </nav>
                         <nav>
-                            <button>Sign Up</button>
+                            <button onClick={() => {
+                                document.querySelector("#log").click();
+                            }}>Sign Up</button>
                         </nav>
+                        <Link href="/Login" id="log"></Link>
                     </aside>
                 </article>
+
             </div>
         </>
     )
