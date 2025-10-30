@@ -33,6 +33,17 @@
                 cursor: pointer;
             }
         }
+        > button{
+            margin-left: 60px;
+            margin-top: 30px;
+            width: 80%;
+            min-height: 50px;
+            background-color: #13A310;
+            border: none;
+            color: #FFF;
+            border-radius: 30px;
+            cursor: pointer;
+        }
         > aside{
             margin-left: 60px;
             margin-top: 60px;
@@ -99,6 +110,11 @@
         }
         > article{
             padding-bottom: 30px;
+            > button{
+                display: block;
+                margin-left: 0px;
+                margin:30px  auto;
+            }
             > aside{
                 margin-left: 20px;
                 > nav{
